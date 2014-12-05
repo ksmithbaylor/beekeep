@@ -1,7 +1,18 @@
 'use strict';
-console.clear();
 
-var main = angular.module('beekeep', ['ionic', 'beekeep.controllers']);
+var modules = {
+    layout: []
+};
+
+var mainDeps = ['ionic'];
+_.forOwn(modules, function(deps, module) {
+    var moduleName = 'beekeep.' + module;
+    deps.unshift('ionic');
+    angular.module(moduleName, deps);
+    mainDeps.push(moduleName);
+});
+
+var main = angular.module('beekeep', mainDeps);
 
 main.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

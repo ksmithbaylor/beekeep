@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('beekeep.controllers', ['ionic'])
-
-.controller('MainController', function($scope, $ionicSideMenuDelegate) {
-    $scope.toggleLeftMenu = function() {
+function SideMenuController($scope, $ionicSideMenuDelegate) {
+    this.toggleLeftMenu = function() {
         $ionicSideMenuDelegate.toggleLeft();
     };
-});
+}
+
+kjs.addController('layout', SideMenuController);
