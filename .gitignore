@@ -3,7 +3,8 @@
 
 node_modules/
 platforms/
-plugins/
-www/lib
+plugins/*.json
+www/
+vendor/
 *.swp
 *.swo
