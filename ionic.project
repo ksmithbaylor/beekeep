@@ -2,11 +2,6 @@
   "name": "BeeKeep",
   "app_id": "",
   "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
+    "default"
   ]
 }
