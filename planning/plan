@@ -1,0 +1,102 @@
+Major user stories:
+    Build queen/hive/pallet/yard hierarchy
+        new queen
+            supplier (choose from list or create new)
+            date installed
+            cell or bred?
+        new hive
+            number
+            add to existing pallet? if building pallet, default to the current one
+    View information about everything (basic crud)
+    See what needs to be done next to my hives, yards, contracts, etc
+        calendar view?
+    Take a new action
+        scan qr code
+        or manual
+    Manage employees (if admin)
+
+
+
+Major app sections:
+    Scan a hive
+
+
+
+
+
+    Add pallet (must have at least one bee yard):
+        Scan all the hives that should go into the pallet
+        What yard should it go in? (default to the one closest to current location, must already have a yard set up)
+        What kind of pallet?
+            4-way
+            6-way
+            8-way
+            Bottom-board
+
+    Add hive (no dependencies):
+        Scan the hive or input the number manually
+        If it's already recognized, offer to go to its viewing page
+        Choose configuration
+            4 frame - Single 9 1/8 (deep)
+            4 frame - Double 9 1/8 (deep)
+            4 frame - Deep and Illinois (9 1/8 and 6 5/8)
+            4 frame - Double Illinois (2 x 6 5/8)
+            4 frame - Triple Illinois (3 x 6 5/8)
+            5 frame
+            8 frame
+            10 frame - with feeder
+            10 frame - without feeder
+            Other
+        Is it on the end or in the center?
+        Add details about the queen
+            What supplier did she come from? (choose from list or add new)
+            What date was she installed?
+            Is she a cell or bred queen?
+
+    Add company:
+        Name
+        Phone number
+        Street Address (optional)
+        City (optional)
+        State (optional unless city isn't empty)
+
+    Add contact:
+        Name (first/last)
+        Phone number
+        Company (optional)
+        If company is selected:
+            Checkbox for "This is the company's primary contact"
+        Else:
+            Street Address (optional)
+            City (optional)
+            State (optional unless city isn't empty)
+
+    Add employee:
+        First name
+        Last name
+        Phone number
+
+    Log in:
+        Select company
+        Select name
+        Enter password
+
+    Options upon scanning a hive:
+        If it's recognized:
+            Show hive
+            Show pallet
+            I moved the sign, delete the old hive and input as a new one
+        If it's a new hive:
+            Add hive
+
+QR code will contain a link to the website with the beehive number
+can a qr code do multiple things?
+
+
+
+
+
+Questions for Steve:
+    Is QRC "Queen Right Colonies"? If so, what did you mean by "Identify hives boxes"?
+    Can you give me a list of the following things:
+        Every type of bee hive configuration you need

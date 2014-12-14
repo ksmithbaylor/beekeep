@@ -1,0 +1,234 @@
+My notes from phone call:
+
+Problem:
+
+Can't tell which farm they were on, pollenation/making honey, need to know everything about each hive
+
+Track:
+
+if been treated for mites or foul-brood
+what treatment did he use
+successful?
+add treatments later on
+prompt to go check how the treatment is doing, or re-treat
+
+metadata
+where they came from
+pollenating
+
+if you've fed, them, when did they feed them, and what
+
+employee info: send frank out to treat bees, be able to know who screwed up
+
+start with the hives
+screen building pallette
+select hives for a pallette together
+track things by pallette, and it would apply to all hives on that pallette
+bee yard
+scan a hive, ask whether to apply it to the whole pallette or the individual hive
+
+yard -> pallette -> hive
+
+hive: active or inactive (q or not)
+
+queens
+origin of the queen
+
+customizable, add and subtract parameters
+
+track failures and stuff across queen suppliers, treatments, etc
+
+bar code
+
+when scanning:
+gps location
+weather
+time
+when looking at a hive, show last scan and all the info about it
+
+run a report and see whether hives die more in the center or end
+
+form factor??
+mobile app, website, etc
+sync??
+
+what is his current solution, and has he looked at other software products out there?
+
+dr jamie ellis, univ of florida - data aggregator
+ucla susan coby? - big into beekiping, breeds queens
+1k-2k commercial beekeepers
+
+
+
+
+
+
+
+
+
+
+
+Dad's notes from phone conversation with Steve:
+
+Can’t tell where bees were
+    Which farm were they on?
+    Were they pollinating
+    Were they making honey?
+Treatments
+    Treated for mites
+    Treated for Foul brood
+    Schedule
+    If treated, which treatment used?
+        Successful?
+        When treated
+Feeding
+    When
+    What
+        Syrup
+        Various types
+        Custom
+        Pollen supplements
+    Feeder type
+Employee Information
+    Who
+    Employee ID
+Hives
+    Queens → Hives → Pallets → Yards
+    Issues
+        Queen
+        Disease
+    QR code
+        Box number
+        Company name
+        Address
+        contact
+        Phone number
+        Alternate contact
+        Alternate phone number
+        Florida license number
+    Location on pallet
+    Configurator
+    Actions
+        Taken
+        Required
+Pallets
+    Configuration
+Queens
+    Origin
+    Date installed
+    Bred or cell
+Queen Supplier
+    Contact info
+Yard Info
+    Pollination or honey location
+    Contact info
+    GPS location
+    Crops in area
+    Notes
+    Weather
+    Actions
+        Taken
+        Required
+Pollination
+    Crop type
+    Farm location
+        Billing information
+        History
+    Contract start / end (Release date)
+    Contracted amount
+        Per hive
+
+
+
+
+
+
+
+
+
+
+Steve's original notes:
+
+Identify hives boxes
+    QRC
+        Box number
+        Company name
+        Address
+        contact
+        Phone number
+        Alternate contact
+        Alternate phone number
+        Florida license number
+Employee
+    info
+Queens suppliers
+    Contact info
+Queen
+    Date installed
+    Cell or bred queen
+Yard info
+    Pollination or honey location
+    Contact info
+    Gps location
+    Crops in area
+    Notes
+Hive
+    Number
+    Configuration
+        10 frame
+            w/wo feeder
+        8 frame
+        5 frame
+        4 frame
+            Single 9 1/8 (deep)
+            Double 9 1/8 (deep)
+            Deep and Illinois (9 1/8 and 6 5/8)
+            Double Illinois (2 x 6 5/8)
+            Triple Illinois (3 x 6 5/8)
+    What queen
+    Location on pallet
+        Center or ends
+Pallet
+    6 way
+    4 way
+    8 way
+    Bottom board
+Actions
+    Performed by
+    Date performed
+    Temperature
+    Weather conditions
+    Time of day
+        inspection
+        Medication
+        Feed
+            Sucrose
+                Bucket feeder, open feeder ,frame feeder
+                additives
+            Fructose
+                Bucket feeder, open feeder ,frame feeder
+                Additives
+            Pollin substitute
+                Brand
+                Powder  or patty
+        Split
+            strength
+        Install super
+        Remove honey
+        Replace queen
+        Relocate
+Actions required
+    Feed
+    Add boxes
+    Requeen
+    Etc….will think of more
+Pollination
+    Farm location
+    Billing information
+    Crops pollinated
+Perform action by yard or individual hive or pallet
+Ie.. move a pallet to pollination, or medicate one hive, or feed a complete yard, etc.
+
+Ken,
+Thinking about the importance of such a program, I’m wondering if we may be able to get a grant from usda to write it.
+http://www.southernsare.org/Grants/Apply-for-a-Grant
