@@ -16,10 +16,10 @@ module.exports = function($ionicPopup) {
           inputType: 'text',
           inputPlaceholder: '0000'
         }).then(function (response) {
-          if (response) {
+          if (response || response === '') {
             success({text: response});
           } else {
-            success({text: 'You cancelled the scan.'});
+            success({cancelled: true});
           }
         });
       }
