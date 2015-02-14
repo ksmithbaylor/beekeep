@@ -8,6 +8,7 @@ var gulp       = require('gulp'),
     plumber    = require('gulp-plumber'),
     tap        = require('gulp-tap'),
     webserver  = require('gulp-webserver'),
+    fs         = require('fs'),
     _          = require('lodash');
 
 var inputDir  = './app/';
@@ -27,10 +28,16 @@ var paths = {
 gulp.task('compile', ['assets', 'html', 'sass', 'js'])
 gulp.task('default', ['compile', 'watch']);
 
-gulp.task('js', function () {
+gulp.task('cordova', function() {
+    var cordovaString = 'module.exports={FAKE:true}\n';
+    fs.writeFileSync(outputDir + 'cordova.js', cordovaString);
+})
+
+gulp.task('js', ['cordova'], function () {
     function bundler(file) {
         file.contents = browserify(file.path).bundle();
     }
+
 
     gulp.src(paths.jsEntry, {read: false})
         .pipe(plumber())

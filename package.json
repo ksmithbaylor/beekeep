@@ -1,77 +1,91 @@
 {
-    "name": "beekeep",
-    "version": "0.0.1",
-    "description": "Apiary management made easy",
-    "devDependencies": {
-        "angular-bsfy": "^1.3.5-2",
-        "bower": "^1.3.3",
-        "browserify": "^7.0.0",
-        "browserify-shim": "^3.8.1",
-        "folderify": "^0.6.0",
-        "gulp": "^3.5.6",
-        "gulp-concat": "^2.2.0",
-        "gulp-minify-css": "^0.3.0",
-        "gulp-notify": "^2.0.1",
-        "gulp-plumber": "^0.6.6",
-        "gulp-rename": "^1.2.0",
-        "gulp-sass": "^0.7.1",
-        "gulp-sourcemaps": "^1.2.8",
-        "gulp-tap": "^0.1.3",
-        "gulp-util": "^2.2.14",
-        "gulp-webserver": "^0.8.8",
-        "lodash": "^2.4.1",
-        "napa": "^0.4.1",
-        "shelljs": "^0.3.0",
-        "vinyl-source-stream": "^1.0.0",
-        "vinyl-transform": "^1.0.0"
+  "name": "beekeep",
+  "version": "0.0.1",
+  "description": "Apiary management made easy",
+  "devDependencies": {
+    "MD5": "^1.2.1",
+    "angular-bsfy": "^1.3.5-2",
+    "bower": "^1.3.3",
+    "browserify": "^7.0.0",
+    "browserify-shim": "^3.8.1",
+    "folderify": "^0.6.0",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-notify": "^2.0.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.1",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-tap": "^0.1.3",
+    "gulp-util": "^2.2.14",
+    "gulp-webserver": "^0.8.8",
+    "lodash": "^2.4.1",
+    "napa": "^0.4.1",
+    "shelljs": "^0.3.0",
+    "string-hash-colour": "0.0.2",
+    "vinyl-source-stream": "^1.0.0",
+    "vinyl-transform": "^1.0.0"
+  },
+  "browser": {
+    "angular": "./www/lib/angular/angular.js",
+    "angular-animate": "./www/lib/angular-animate/angular-animate.js",
+    "angular-sanitize": "./www/lib/angular-sanitize/angular-sanitize.js",
+    "angular-ui-router": "./www/lib/angular-ui-router/release/angular-ui-router.js",
+    "collide": "./www/lib/collide/collide.js",
+    "cordova": "./www/cordova.js",
+    "ionic": "./www/lib/ionic/js/ionic.js",
+    "ionic-angular": "./www/lib/ionic/js/ionic-angular.js",
+    "ng-cordova": "./www/lib/ngCordova/dist/ng-cordova.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "cordova": "cordova",
+    "angular": "angular",
+    "ionic": "ionic",
+    "collide": "collide",
+    "angular-animate": {
+      "depends": [
+        "angular"
+      ]
     },
-    "browser": {
-        "angular": "./www/lib/angular/angular.js",
-        "angular-animate": "./www/lib/angular-animate/angular-animate.js",
-        "angular-sanitize": "./www/lib/angular-sanitize/angular-sanitize.js",
-        "angular-ui-router": "./www/lib/angular-ui-router/release/angular-ui-router.js",
-        "collide": "./www/lib/collide/collide.js",
-        "ionic": "./www/lib/ionic/js/ionic.js",
-        "ionic-angular": "./www/lib/ionic/js/ionic-angular.js"
+    "angular-resource": {
+      "depends": [
+        "angular"
+      ]
     },
-    "browserify": {
-        "transform": [
-            "browserify-shim"
-        ]
+    "angular-ui-router": {
+      "depends": [
+        "angular"
+      ]
     },
-    "browserify-shim": {
-        "angular": "angular",
-        "ionic": "ionic",
-        "collide": "collide",
-        "angular-animate": {
-            "depends": [
-                "angular"
-            ]
-        },
-        "angular-resource": {
-            "depends": [
-                "angular"
-            ]
-        },
-        "angular-ui-router": {
-            "depends": [
-                "angular"
-            ]
-        },
-        "angular-sanitize": {
-            "depends": [
-                "angular"
-            ]
-        },
-        "ionic-angular": {
-            "depends": [
-                "angular",
-                "angular-animate",
-                "angular-sanitize",
-                "angular-ui-router",
-                "collide",
-                "ionic"
-            ]
-        }
+    "angular-sanitize": {
+      "depends": [
+        "angular"
+      ]
+    },
+    "ionic-angular": {
+      "depends": [
+        "angular",
+        "angular-animate",
+        "angular-sanitize",
+        "angular-ui-router",
+        "collide",
+        "ionic"
+      ]
     }
+  },
+  "dependencies": {
+    "pouchdb": "^3.3.0",
+    "relational-pouch": "^1.3.1"
+  },
+  "cordovaPlugins": [
+    "https://github.com/Dbuggerx/BarcodeScanner",
+    "org.apache.cordova.camera",
+    "com.ionic.keyboard"
+  ]
 }
