@@ -13,6 +13,35 @@ var app = angular.module('beekeep', _.flatten([
     require('./modules') // load all modules
 ]));
 
+app.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'modules/sidemenu/sidemenu.html',
+    controller: 'SidemenuController'
+  });
+
+  $stateProvider.state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'modules/home/home.html'
+      }
+    }
+  });
+
+  $stateProvider.state('app.overview', {
+    url: '/overview',
+    views: {
+      'menuContent': {
+        templateUrl: 'modules/overview/overview.html'
+      }
+    }
+  });
+
+  $urlRouterProvider.otherwise('/app/home');
+});
+
 // App initialization module
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
