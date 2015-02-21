@@ -86,6 +86,7 @@
   "cordovaPlugins": [
     "https://github.com/Dbuggerx/BarcodeScanner",
     "org.apache.cordova.camera",
-    "com.ionic.keyboard"
+    "com.ionic.keyboard",
+    "com.brodysoft.sqlitePlugin"
   ]
 }
