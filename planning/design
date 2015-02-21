@@ -1,0 +1,41 @@
+HIVE:
+{
+    id: 'hive_13b4f784f71b34briuywb48234f',
+    pallet: 'pallet_asdcabb67q746bt7erv74',
+    number: 123,
+    config: 'hive-config_a87e8b7ac8sdbca8s6dcdhfj887',
+    notes: 'this is an awesome hive, needs treatment for xyz'
+}
+
+HIVE-CONFIG:
+{
+    id: 'hive-config_a87e8b7ac8sdbca8s6dcdhfj887',
+    description: 'big and tall'
+}
+
+QUEEN:
+{
+    id: 'queen_adfa8n7ad87absd87ca',
+    hive: 'hive_13b4f784f71b34briuywb48234f',
+    bred: true,
+    cell: false,
+    notes: 'billie jean is not my lover'
+}
+
+PALLET:
+{
+    id: 'pallet_asdcabb67q746bt7erv74',
+    config: 'pallet-config_anc873nc36c4bw76rcb7we6b',
+}
+
+To get all hives for a pallet:
+var palletID = 'pallet_asdcabb67q746bt7erv74';
+db.allDocs({startkey: 'hive_', endkey: 'hive`', include_docs: true}, function (err, response) {
+  var hives = _.where(response, {pallet: palletID});
+  found(hives);
+});
+
+var palletID = 'pallet_asdcabb67q746bt7erv74';
+DB.where('hive', {pallet: palletID}, function (err, results) {
+  found(hives);
+})
