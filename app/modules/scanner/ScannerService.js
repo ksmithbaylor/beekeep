@@ -1,14 +1,17 @@
 'use strict';
 
-module.exports = function($ionicPopup) {
+module.exports = function($ionicPopup, $ionicPlatform) {
   return {
     scan: function (label, success, fail) {
       if (window.cordova) {
-        cordova.plugins.barcodeScanner.scan(
-          function (result) { success(result); },
-          function (error) { fail(error); },
-          label
-        );
+        var successCB = function (result) { success(result) };
+        var failCB = function (error) { fail(error) };
+
+        if (window.ionic.Platform.isAndroid()) {
+          cordova.plugins.barcodeScanner.scan(successCB, failCB, 'Scan a hive');
+        } else {
+          cordova.plugins.barcodeScanner.scan(successCB, failCB);
+        }
       } else {
         $ionicPopup.prompt({
           title: 'Fake Scanner',
