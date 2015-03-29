@@ -3,7 +3,6 @@ var gulp       = require('gulp'),
     browserify = require('browserify'),
     bower      = require('bower'),
     sass       = require('gulp-sass'),
-    minifyCss  = require('gulp-minify-css'),
     rename     = require('gulp-rename'),
     plumber    = require('gulp-plumber'),
     tap        = require('gulp-tap'),
@@ -52,7 +51,6 @@ gulp.task('sass', function(done) {
             errLogToConsole: true
         }))
         .pipe(sourcemaps.write())
-        .pipe(minifyCss())
         .pipe(rename('app.bundle.css'))
         .pipe(gulp.dest(outputDir + 'css/'))
         .on('end', done);
