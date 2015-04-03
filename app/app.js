@@ -24,7 +24,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app.home', {
     url: '/home',
     views: {
-      'menuContent': {
+      'home': {
         templateUrl: 'modules/home/home.html'
       }
     }
@@ -33,7 +33,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app.overview', {
     url: '/overview',
     views: {
-      'menuContent': {
+      'overview': {
         templateUrl: 'modules/overview/overview.html'
       }
     }
