@@ -30,3 +30,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     height: 50px;
     width: 50px;
 }
+
+.tabs .tab-item {
+    max-width: none;
+}
