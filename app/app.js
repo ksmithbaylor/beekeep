@@ -17,8 +17,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'modules/sidemenu/sidemenu.html',
-    controller: 'SidemenuController'
+    templateUrl: 'modules/navigation/navigation.html',
+    controller: 'NavigationController'
   });
 
   $stateProvider.state('app.home', {
