@@ -34,3 +34,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .tabs .tab-item {
     max-width: none;
 }
+
+.tab-nav {
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.15);
+}
+
+.bar-header {
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+}
+
+.bar.bar-energized .title {
+    color: black;
+}
+
+.bar .title {
+    font-size: 25px;
+}
