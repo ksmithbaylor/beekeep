@@ -86,6 +86,14 @@
     "https://github.com/Dbuggerx/BarcodeScanner",
     "org.apache.cordova.camera",
     "com.ionic.keyboard",
-    "com.brodysoft.sqlitePlugin"
+    "com.brodysoft.sqlitePlugin",
+    "./engine/cordova-crosswalk-engine-c0.7.1",
+    "org.apache.cordova.splashscreen"
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "locator": "./engine/cordova-android-c0.6.1/"
+    }
   ]
 }
