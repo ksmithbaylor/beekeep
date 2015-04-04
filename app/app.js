@@ -13,7 +13,11 @@ var app = angular.module('beekeep', _.flatten([
     require('./modules') // load all modules
 ]));
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.navBar.alignTitle('center');
+  $ionicConfigProvider.views.transition('ios');
+
   $stateProvider.state('app', {
     url: '/app',
     abstract: true,
