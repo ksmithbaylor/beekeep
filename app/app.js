@@ -29,7 +29,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     url: '/home',
     views: {
       'home': {
-        templateUrl: 'modules/home/home.html'
+        templateUrl: 'modules/home/home.html',
+        controller: 'HomeController'
       }
     }
   });
@@ -38,7 +39,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     url: '/overview',
     views: {
       'overview': {
-        templateUrl: 'modules/overview/overview.html'
+        templateUrl: 'modules/overview/overview.html',
+        controller: 'OverviewController'
       }
     }
   });
