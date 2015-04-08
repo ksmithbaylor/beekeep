@@ -4,14 +4,8 @@ module.exports = function($ionicPopup, $ionicPlatform) {
   return {
     scan: function (label, success, fail) {
       if (window.cordova) {
-        var successCB = function (result) { success(result) };
-        var failCB = function (error) { fail(error) };
-
-        if (window.ionic.Platform.isAndroid()) {
-          cordova.plugins.barcodeScanner.scan(successCB, failCB, 'Scan a hive');
-        } else {
-          cordova.plugins.barcodeScanner.scan(successCB, failCB);
-        }
+        var label = window.ionic.Platform.isAndroid() ? 'Scan a hive' : null;
+        cordova.plugins.barcodeScanner.scan(success, fail, label);
       } else {
         $ionicPopup.prompt({
           title: 'Fake Scanner',
