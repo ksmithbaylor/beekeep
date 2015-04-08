@@ -46,6 +46,20 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $urlRouterProvider.otherwise('/app/home');
 });
 
+// SQLite plugin sanity check
+app.run(function($ionicPlatform, $cordovaSQLite) {
+  $ionicPlatform.ready(function() {
+    if (window.cordova) {
+      var db = $cordovaSQLite.openDB({name: 'my.db'});
+      $cordovaSQLite.execute(db, 'create table if not exists testing (asdf TEXT)').then(function(res) {
+        $cordovaSQLite.execute(db, 'insert into testing (asdf) values ("hello world")').then(function(res) {
+          console.log('There are ' + res.insertId + ' rows in the test db');
+        });
+      });
+    }
+  });
+});
+
 // App initialization module
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
