@@ -6,5 +6,6 @@ module.exports = _.map([
     require('./home'),
     require('./scanner'),
     require('./overview'),
-    require('./navigation')
+    require('./navigation'),
+    require('./db')
 ], function(x) { return x.name; });
