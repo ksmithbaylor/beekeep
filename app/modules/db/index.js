@@ -14,7 +14,6 @@ require('angular-pouchdb');
 module.exports = require('angular').module('beekeep.db', ['pouchdb']);
 
 module.exports.factory('DB', function(pouchDB, pouchDecorators) {
-  console.log('opening db');
   var db = pouchDB('beekeep', {
     adapter: 'websql'
   });
