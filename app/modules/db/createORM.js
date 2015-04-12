@@ -19,6 +19,11 @@ module.exports = function (db, singular, plural, relations) {
       return res[plural];
     },
 
+    first: function* () {
+      var res = yield db.rel.find(singular);
+      return res[plural] ? res[plural][0] : undefined;
+    }
+
     destroy: function* (object) {
       return (yield db.rel.del(singular, object)).deleted;
     },
