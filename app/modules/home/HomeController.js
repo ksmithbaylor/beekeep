@@ -1,11 +1,33 @@
 'use strict';
 
-module.exports = function($scope, $rootScope, DB) {
+var co = require('co');
+
+
+module.exports = function($scope, DB, $ionicPlatform) {
   $scope.data = {};
 
-  DB.rel.find('hive').then(function(res) {
-    $scope.data.numHives = res.hives.length;
-  }).catch(function(err) {
-    console.log('ERROR:', err);
-  });
+  updateCount();
+
+  function updateCount() {
+    co(function* () {
+      var hives = yield DB.Hive.all()
+      $scope.data.numHives = hives.length;
+      $scope.$apply();
+    });
+  };
+
+  $scope.addHive = function() {
+    co(function* () {
+      var hive = yield DB.Hive.create();
+      updateCount();
+    });
+  };
+
+  $scope.removeFirstHive = function() {
+    co(function* () {
+      var hive = yield DB.Hive.first();
+      if (hive) yield DB.Hive.destroy(hive);
+      updateCount();
+    })
+  };
 };
