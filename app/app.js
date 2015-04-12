@@ -7,6 +7,8 @@ var angular = require('angular');
 require('ionic-angular');
 require('ng-cordova');
 
+window.DEBUG = true;
+
 // Declare the main module
 var app = angular.module('beekeep', _.flatten([
     'ionic',
