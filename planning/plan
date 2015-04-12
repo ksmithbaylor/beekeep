@@ -15,13 +15,24 @@ Major user stories:
         or manual
     Manage employees (if admin)
 
-Side menu items:
-    Build Farm
-
-
-
 Major app sections:
-    Scan a hive
+    Overview - Shows stats on all yards, total hives, etc
+    Build - Create or edit the heirarchy of hives/pallets/yards
+        New bee yard button
+            (create bee yard with null attributes)
+            Go to Edit Bee Yard page for that new yard
+        New pallet button
+            (create pallet with no hives and null attributes)
+            Go to Edit Pallet page for that new pallet
+        New hive button
+            Scan hive
+            (create hive with null attributes)
+            Go to Edit Hive page for that new hive
+        Move pallet button
+        Move hive button
+    Browse - Drill-down view
+        Edit Details button on each yard, pallet, and hive
+            Takes you to the Edit ____ page for that entity
 
 
 
