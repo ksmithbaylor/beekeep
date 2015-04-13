@@ -2,7 +2,6 @@
 
 var co = require('co');
 
-
 module.exports = function($scope, DB, $ionicPlatform) {
   $scope.data = {};
 
@@ -10,7 +9,7 @@ module.exports = function($scope, DB, $ionicPlatform) {
 
   function updateCount() {
     co(function* () {
-      var hives = yield DB.Hive.all()
+      var hives = yield DB.Hive.all();
       $scope.data.numHives = hives.length;
       $scope.$apply();
     });
@@ -28,6 +27,6 @@ module.exports = function($scope, DB, $ionicPlatform) {
       var hive = yield DB.Hive.first();
       if (hive) yield DB.Hive.destroy(hive);
       updateCount();
-    })
+    });
   };
 };

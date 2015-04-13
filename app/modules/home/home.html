@@ -2,6 +2,6 @@
     <ion-content style="text-align: center; margin-top: 0.5em;" class="has-header">
         <p>Number of hives: <span ng-bind="data.numHives"></span></p>
         <button class="button button-positive" ng-click="addHive()">Add a hive</button>
-        <button class="button button-assertive" ng-click="removeFirstHive()">Remove a hive</button>
+        <button ng-disabled="data.numHives === 0" class="button button-assertive" ng-click="removeFirstHive()">Remove a hive</button>
     </ion-content>
 </ion-view>
