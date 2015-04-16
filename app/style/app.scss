@@ -60,3 +60,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .text-assertive { color: $assertive !important; }
 .text-royal { color: $royal !important; }
 .text-dark { color: $dark !important; }
+
+.tile {
+    margin: 1%;
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}

@@ -23,26 +23,36 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider.state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'modules/navigation/navigation.html',
+    templateUrl: 'modules/views/navigation/navigation.html',
     controller: 'NavigationController'
-  });
-
-  $stateProvider.state('app.sandbox', {
-    url: '/sandbox',
-    views: {
-      'sandbox': {
-        templateUrl: 'modules/sandbox/view.html',
-        controller: 'SandboxController'
-      }
-    }
   });
 
   $stateProvider.state('app.overview', {
     url: '/overview',
     views: {
       'overview': {
-        templateUrl: 'modules/overview/overview.html',
+        templateUrl: 'modules/views/overview/overview.html',
         controller: 'OverviewController'
+      }
+    }
+  });
+
+  $stateProvider.state('app.build', {
+    url: '/build',
+    views: {
+      'build': {
+        templateUrl: 'modules/views/build/view.html',
+        controller: 'BuildController'
+      }
+    }
+  });
+
+  $stateProvider.state('app.sandbox', {
+    url: '/sandbox',
+    views: {
+      'sandbox': {
+        templateUrl: 'modules/views/sandbox/view.html',
+        controller: 'SandboxController'
       }
     }
   });
