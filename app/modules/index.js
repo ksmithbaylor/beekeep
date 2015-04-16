@@ -3,9 +3,9 @@
 var _ = require('lodash');
 
 module.exports = _.map([
-    require('./sandbox'),
-    require('./scanner'),
-    require('./overview'),
-    require('./navigation'),
-    require('./db')
+    require('./views/sandbox'),
+    require('./views/overview'),
+    require('./views/navigation'),
+    require('./common/scanner'),
+    require('./common/db')
 ], function(x) { return x.name; });
