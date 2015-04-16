@@ -27,12 +27,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     controller: 'NavigationController'
   });
 
-  $stateProvider.state('app.home', {
-    url: '/home',
+  $stateProvider.state('app.sandbox', {
+    url: '/sandbox',
     views: {
-      'home': {
-        templateUrl: 'modules/home/home.html',
-        controller: 'HomeController'
+      'sandbox': {
+        templateUrl: 'modules/sandbox/view.html',
+        controller: 'SandboxController'
       }
     }
   });
@@ -47,7 +47,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     }
   });
 
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/sandbox');
 });
 
 // SQLite plugin sanity check

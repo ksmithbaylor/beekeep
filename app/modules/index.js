@@ -3,7 +3,7 @@
 var _ = require('lodash');
 
 module.exports = _.map([
-    require('./home'),
+    require('./sandbox'),
     require('./scanner'),
     require('./overview'),
     require('./navigation'),
