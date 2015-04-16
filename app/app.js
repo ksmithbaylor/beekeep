@@ -23,7 +23,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider.state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'modules/views/navigation/navigation.html',
+    templateUrl: 'modules/views/navigation/tabs.html',
     controller: 'NavigationController'
   });
 
@@ -31,7 +31,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     url: '/overview',
     views: {
       'overview': {
-        templateUrl: 'modules/views/overview/overview.html',
+        templateUrl: 'modules/views/overview/view.html',
         controller: 'OverviewController'
       }
     }
