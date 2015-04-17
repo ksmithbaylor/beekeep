@@ -28,8 +28,6 @@ Major app sections:
             Scan hive
             (create hive with null attributes)
             Go to Edit Hive page for that new hive
-        Move pallet button
-        Move hive button
     Browse - Drill-down view
         Edit Details button on each yard, pallet, and hive
             Takes you to the Edit ____ page for that entity
