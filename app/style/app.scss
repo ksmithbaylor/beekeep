@@ -36,12 +36,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .tab-item.tab-item-active {
-    background-color: darken($stable, 7%);
+    background-color: darken($stable, 8%);
 }
 
-.tab-nav, .bar-header {
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.20);
-}
+.bar-header { box-shadow: 0 4px 6px 0px rgba(50,50,50,0.20); }
+.tab-nav { box-shadow: 0 0px 10px 0px rgba(50,50,50,0.50); }
 
 .bar.bar-energized .title {
     color: $dark;
@@ -60,10 +59,3 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .text-assertive { color: $assertive !important; }
 .text-royal { color: $royal !important; }
 .text-dark { color: $dark !important; }
-
-.tile {
-    margin: 1%;
-    position: relative;
-    padding-top: 15%;
-    padding-bottom: 15%;
-}
