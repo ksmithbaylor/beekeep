@@ -18,7 +18,7 @@ var app = angular.module('beekeep', _.flatten([
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
   $ionicConfigProvider.navBar.alignTitle('center');
-  $ionicConfigProvider.views.transition('ios');
+  $ionicConfigProvider.views.transition('none');
 
   $stateProvider.state('app', {
     url: '/app',
@@ -27,22 +27,42 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     controller: 'NavigationController'
   });
 
-  $stateProvider.state('app.overview', {
-    url: '/overview',
+  $stateProvider.state('app.home', {
+    url: '/home',
     views: {
-      'overview': {
-        templateUrl: 'modules/views/overview/view.html',
-        controller: 'OverviewController'
+      'home': {
+        templateUrl: 'modules/views/home/view.html',
+        controller: 'HomeController'
       }
     }
   });
 
-  $stateProvider.state('app.build', {
-    url: '/build',
+  $stateProvider.state('app.browse', {
+    url: '/browse',
     views: {
-      'build': {
-        templateUrl: 'modules/views/build/view.html',
-        controller: 'BuildController'
+      'browse': {
+        templateUrl: 'modules/views/browse/view.html',
+        controller: 'BrowseController'
+      }
+    }
+  });
+
+  $stateProvider.state('app.activity', {
+    url: '/activity',
+    views: {
+      'activity': {
+        templateUrl: 'modules/views/activity/view.html',
+        controller: 'ActivityController'
+      }
+    }
+  });
+
+  $stateProvider.state('app.todo', {
+    url: '/todo',
+    views: {
+      'todo': {
+        templateUrl: 'modules/views/todo/view.html',
+        controller: 'TodoController'
       }
     }
   });
@@ -57,7 +77,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     }
   });
 
-  $urlRouterProvider.otherwise('/app/sandbox');
+  $urlRouterProvider.otherwise('/app/home');
 });
 
 // SQLite plugin sanity check

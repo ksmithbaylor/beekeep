@@ -4,8 +4,10 @@ var _ = require('lodash');
 
 module.exports = _.map([
     require('./views/navigation'),
-    require('./views/overview'),
-    require('./views/build'),
+    require('./views/home'),
+    require('./views/browse'),
+    require('./views/activity'),
+    require('./views/todo'),
     require('./views/sandbox'),
     require('./common/scanner'),
     require('./common/db')

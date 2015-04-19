@@ -8,7 +8,7 @@
     "angular-ui-router": "0.2.13"
   },
   "dependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0-rc.1",
+    "ionic": "driftyco/ionic-bower#1.0.0-rc.3",
     "ngCordova": "~0.1.14-alpha",
     "collide": "~0.0.4"
   }

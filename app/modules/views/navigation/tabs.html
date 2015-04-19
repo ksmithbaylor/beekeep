@@ -1,27 +1,24 @@
-<ion-nav-bar class="bar bar-header bar-energized nav-title-slide-ios7">
+<ion-nav-bar class="bar bar-header bar-energized">
     <ion-nav-back-button class="button-icon icon ion-chevron-left">Back</ion-nav-back-button>
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-assertive icon ion-qr-scanner" ng-click="scan()"></button>
+        <button class="button button-clear button-dark icon ion-qr-scanner" ng-click="scan()"></button>
     </ion-nav-buttons>
 </ion-nav-bar>
 
-<ion-tabs class="tabs-background-stable tabs-stable tabs-striped tabs-icon-left">
-
-    <ion-tab title="Home" icon="ion-home"></ion-tab>
-    <ion-tab title="Browse" icon="ion-eye"></ion-tab>
-    <ion-tab title="Activity" icon="ion-android-list"></ion-tab>
-    <ion-tab title="To Do" icon="ion-checkmark"></ion-tab>
-
-    <!--<ion-tab title="Overview" icon="ion-eye" href="#/app/overview">-->
-        <!--<ion-nav-view name="overview"></ion-nav-view>-->
-    <!--</ion-tab>-->
-
-    <!--<ion-tab title="Build" icon="ion-wrench" href="#/app/build">-->
-        <!--<ion-nav-view name="build"></ion-nav-view>-->
-    <!--</ion-tab>-->
-
-    <!--<ion-tab title="Sandbox" icon="ion-cube" href="#/app/sandbox">-->
-        <!--<ion-nav-view name="sandbox"></ion-nav-view>-->
-    <!--</ion-tab>-->
-
+<ion-tabs class="tabs-background-stable tabs-stable tabs-striped tabs-icon-top">
+    <ion-tab title="Home" icon="ion-home" href="#/app/home">
+        <ion-nav-view name="home"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Browse" icon="ion-eye" href="#/app/browse">
+        <ion-nav-view name="browse"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Activity" icon="ion-android-list" href="#/app/activity">
+        <ion-nav-view name="activity"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="To Do" icon="ion-checkmark" href="#/app/todo">
+        <ion-nav-view name="todo"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Sandbox" icon="ion-cube" href="#/app/sandbox">
+        <ion-nav-view name="sandbox"></ion-nav-view>
+    </ion-tab>
 </ion-tabs>
