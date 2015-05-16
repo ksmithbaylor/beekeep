@@ -8,16 +8,16 @@ module.exports = function($scope, DB, $ionicPlatform) {
   update();
 
   function update() {
-    co(function* () {
+    return co(function* () {
       $scope.data.hives = yield DB.Hive.all();
       $scope.$apply();
     });
-  };
+  }
 
   $scope.addHive = function() {
     co(function* () {
       var hive = yield DB.Hive.create();
-      update();
+      yield update();
     });
   };
 
@@ -25,7 +25,7 @@ module.exports = function($scope, DB, $ionicPlatform) {
     co(function* () {
       var hive = yield DB.Hive.first();
       if (hive) yield DB.Hive.destroy(hive);
-      update();
+      yield update();
     });
   };
 };
