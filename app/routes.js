@@ -26,6 +26,15 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
+  $stateProvider.state('app.next', {
+    url: '/next',
+    views: {
+      'browse': {
+        templateUrl: 'modules/views/browse/next.html'
+      }
+    }
+  });
+
   $stateProvider.state('app.activity', {
     url: '/activity',
     views: {
