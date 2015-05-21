@@ -10,7 +10,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/home',
     views: {
       'home': {
-        templateUrl: 'modules/views/home/view.html',
+        templateUrl: 'modules/views/home/index.html',
         controller: 'HomeController'
       }
     }
@@ -20,7 +20,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/browse',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/view.html',
+        templateUrl: 'modules/views/browse/index.html',
         controller: 'BrowseController'
       }
     }
@@ -30,7 +30,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/activity',
     views: {
       'activity': {
-        templateUrl: 'modules/views/activity/view.html',
+        templateUrl: 'modules/views/activity/index.html',
         controller: 'ActivityController'
       }
     }
@@ -40,7 +40,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/todo',
     views: {
       'todo': {
-        templateUrl: 'modules/views/todo/view.html',
+        templateUrl: 'modules/views/todo/index.html',
         controller: 'TodoController'
       }
     }
@@ -50,7 +50,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/sandbox',
     views: {
       'sandbox': {
-        templateUrl: 'modules/views/sandbox/view.html',
+        templateUrl: 'modules/views/sandbox/index.html',
         controller: 'SandboxController'
       }
     }
