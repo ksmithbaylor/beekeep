@@ -15,14 +15,14 @@ module.exports = function($scope, DB, $ionicPlatform) {
   }
 
   $scope.addHive = function() {
-    co(function* () {
+    return co(function* () {
       var hive = yield DB.Hive.create();
       yield update();
     });
   };
 
   $scope.removeFirstHive = function() {
-    co(function* () {
+    return co(function* () {
       var hive = yield DB.Hive.first();
       if (hive) yield DB.Hive.destroy(hive);
       yield update();
