@@ -1,6 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
+var co = require('co');
 var angular = require('angular');
 
 // Initialize required modules
@@ -8,6 +9,7 @@ require('ionic-angular');
 require('ng-cordova');
 
 window.DEBUG = true;
+var resetDatabase = false;
 
 // Declare the main module
 var app = angular.module('beekeep', _.flatten([
@@ -22,6 +24,24 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
   require('./routes.js')($stateProvider, $urlRouterProvider);
 });
+
+if (resetDatabase) {
+  app.run(function(DB, $rootScope) {
+    return co(function* () {
+      var types = ['Yard', 'Hive', 'Pallet', 'Queen'];
+
+      for (var i in types) {
+        var type = types[i];
+        var all = yield DB[type].all();
+        yield all.map(function(r) {
+          return DB[type].destroy(r);
+        });
+      }
+
+      $rootScope.$apply();
+    });
+  });
+}
 
 // App initialization module
 app.run(function($ionicPlatform) {
