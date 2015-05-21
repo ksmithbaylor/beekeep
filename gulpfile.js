@@ -69,6 +69,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.assets, ['assets']);
 });
 
+gulp.task('build', ['js', 'sass', 'html', 'assets']);
+
 gulp.task('default', [
   'js',
   'sass',
