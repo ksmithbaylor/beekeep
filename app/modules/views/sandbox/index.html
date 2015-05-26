@@ -1,21 +1,21 @@
 <ion-view title="Sandbox">
     <ion-content scrollbar-y="false" has-bouncing="true" class="has-header">
         <div class="button-bar">
-            <button
-                class="button button-positive"
-                ng-click="addHive()">
-                Add a hive
-            </button>
-            <button
-                ng-disabled="data.hives.length === 0"
-                class="button button-assertive"
-                ng-click="removeFirstHive()">
-                Remove a hive
-            </button>
+            <button class="button button-positive" ng-click="addThing('Yard')">Add a yard</button>
+            <button ng-disabled="$root.data.yards.length === 0" class="button button-assertive" ng-click="removeFirstThing('Yard')">Remove a yard</button>
+        </div>
+        <div class="button-bar">
+            <button class="button button-positive" ng-click="addThing('Pallet')">Add a pallet</button>
+            <button ng-disabled="$root.data.pallets.length === 0" class="button button-assertive" ng-click="removeFirstThing('Pallet')">Remove a pallet</button>
+        </div>
+        <div class="button-bar">
+            <button class="button button-positive" ng-click="addThing('Hive')">Add a hive</button>
+            <button ng-disabled="$root.data.hives.length === 0" class="button button-assertive" ng-click="removeFirstThing('Hive')">Remove a hive</button>
         </div>
         <ion-list class="padding-top">
-            <ion-item ng-repeat="hive in data.hives">
-                {{hive.id}}
+            <ion-item ng-repeat="thing in ['yards', 'pallets', 'hives']">
+                {{thing}}:
+                <span class="badge badge-positive">{{$root.data[thing].length}}</span>
             </ion-item>
         </ion-list>
     </ion-content>

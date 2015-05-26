@@ -2,30 +2,21 @@
 
 var co = require('co');
 
-module.exports = function($scope, DB, $ionicPlatform) {
+module.exports = function($scope, $rootScope, DB, $ionicPlatform) {
   $scope.data = {};
 
-  update();
-
-  function update() {
+  $scope.addThing = function(thing) {
     return co(function* () {
-      $scope.data.hives = yield DB.Hive.all();
-      $scope.$apply();
+      var created = yield DB[thing].create();
+      yield $rootScope.update(thing);
     });
   }
 
-  $scope.addHive = function() {
+  $scope.removeFirstThing = function(thing) {
     return co(function* () {
-      var hive = yield DB.Hive.create();
-      yield update();
-    });
-  };
-
-  $scope.removeFirstHive = function() {
-    return co(function* () {
-      var hive = yield DB.Hive.first();
-      if (hive) yield DB.Hive.destroy(hive);
-      yield update();
+      var instance = yield DB[thing].first();
+      if (instance) yield DB[thing].destroy(instance);
+      yield $rootScope.update(thing);
     });
   };
 };

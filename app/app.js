@@ -44,7 +44,20 @@ if (resetDatabase) {
 }
 
 // App initialization module
-app.run(function($ionicPlatform) {
+app.run(function($rootScope, DB, $ionicPlatform) {
+  $rootScope.data = {};
+
+  $rootScope.update = function(thing) {
+    return co(function* () {
+      $rootScope.data[thing.toLowerCase() + 's'] = yield DB[thing].all();
+      $rootScope.$apply();
+    });
+  };
+
+  $rootScope.update('Yard');
+  $rootScope.update('Pallet');
+  $rootScope.update('Hive');
+
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
