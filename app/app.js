@@ -20,7 +20,7 @@ var app = angular.module('beekeep', _.flatten([
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
   $ionicConfigProvider.navBar.alignTitle('center');
-  $ionicConfigProvider.views.transition('none');
+  $ionicConfigProvider.views.transition('ios');
 
   require('./routes.js')($stateProvider, $urlRouterProvider);
 });
