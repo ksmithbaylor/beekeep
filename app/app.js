@@ -54,9 +54,9 @@ app.run(function($rootScope, DB, $ionicPlatform) {
     });
   };
 
-  $rootScope.update('Yard');
-  $rootScope.update('Pallet');
-  $rootScope.update('Hive');
+  _.each(['Yard', 'Pallet', 'Hive'], function(thing) {
+    return $rootScope.update(thing);
+  });
 
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {

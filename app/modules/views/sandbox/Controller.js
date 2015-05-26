@@ -3,8 +3,6 @@
 var co = require('co');
 
 module.exports = function($scope, $rootScope, DB, $ionicPlatform) {
-  $scope.data = {};
-
   $scope.addThing = function(thing) {
     return co(function* () {
       var created = yield DB[thing].create();
