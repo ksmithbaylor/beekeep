@@ -1,7 +1,7 @@
 <ion-view title="Bee Yards">
     <ion-content class="has-header">
         <ion-list>
-            <ion-item class="item-icon-left item-icon-right" ng-repeat="yard in $root.data.yards" ui-sref="???">
+            <ion-item class="item-icon-left item-icon-right" ng-repeat="yard in $root.data.yards" ui-sref="app.yardDetail({id: yard.id})">
                 <i class="icon ion-edit"></i>
                 Yard name
                 <i class="icon ion-ios-arrow-right"></i>

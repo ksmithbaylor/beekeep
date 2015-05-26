@@ -1,10 +1,13 @@
+'use strict';
+
 module.exports = function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app', {
-    url: '/app',
     abstract: true,
     templateUrl: 'modules/views/navigation/tabs.html',
     controller: 'NavigationController'
   });
+
+  // Home Tab Routes ///////////////////////////////////////////////////////////
 
   $stateProvider.state('app.home', {
     url: '/home',
@@ -16,6 +19,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
+  // Browse Tab Routes /////////////////////////////////////////////////////////
+
   $stateProvider.state('app.browse', {
     url: '/browse',
     views: {
@@ -26,14 +31,17 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
-  $stateProvider.state('app.next', {
-    url: '/next',
+  $stateProvider.state('app.yardDetail', {
+    url: '/yard_detail/:id',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/next.html'
+        templateUrl: 'modules/views/browse/yard.html',
+        controller: 'YardDetailController'
       }
-    }
+    },
   });
+
+  // Activity Tab Routes ///////////////////////////////////////////////////////
 
   $stateProvider.state('app.activity', {
     url: '/activity',
@@ -44,6 +52,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
       }
     }
   });
+
+  // Todo Tab Routes ///////////////////////////////////////////////////////////
 
   $stateProvider.state('app.todo', {
     url: '/todo',
@@ -65,5 +75,5 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/home');
 };
