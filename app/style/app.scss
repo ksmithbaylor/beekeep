@@ -59,3 +59,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .text-assertive { color: $assertive !important; }
 .text-royal { color: $royal !important; }
 .text-dark { color: $dark !important; }
+
+.item-icon-right .icon.ion-ios-arrow-right,
+.item-icon-left .icon.ion-edit {
+    font-size: 1.3em;
+    opacity: .5;
+}
