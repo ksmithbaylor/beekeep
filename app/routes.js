@@ -20,7 +20,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/browse',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/index.html',
+        templateUrl: 'modules/views/browse/yards.html',
         controller: 'BrowseController'
       }
     }
