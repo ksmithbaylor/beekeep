@@ -15,6 +15,10 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$energized: #FFC107;
+$positive: #01579B;
+$dark: #263238;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
@@ -26,30 +30,30 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   display: none !important;
 }
 
-#hiveNumberColor {
-    height: 50px;
-    width: 50px;
-}
-
-.tabs .tab-item {
-    max-width: none;
-}
-
+// Active tab item
 .tab-item.tab-item-active {
     background-color: darken($stable, 8%);
 }
 
+// Shadows for header and tabs
 .bar-header { box-shadow: 0 4px 6px 0px rgba(50,50,50,0.20); }
 .tab-nav { box-shadow: 0 0px 10px 0px rgba(50,50,50,0.50); }
 
+// Title bar
 .bar.bar-energized .title {
+    color: black;
+}
+
+// Edit and arrow list icons
+.item-icon-right .icon.ion-ios-arrow-right,
+.item-icon-left .icon.ion-edit {
+    font-size: 1.3em;
+    opacity: .5;
+    text-decoration: none;
     color: $dark;
 }
 
-.bar .title {
-    font-size: 25px !important;
-}
-
+// Utility
 .text-light { color: $light !important; }
 .text-stable { color: $stable !important; }
 .text-positive { color: $positive !important; }
@@ -59,9 +63,4 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .text-assertive { color: $assertive !important; }
 .text-royal { color: $royal !important; }
 .text-dark { color: $dark !important; }
-
-.item-icon-right .icon.ion-ios-arrow-right,
-.item-icon-left .icon.ion-edit {
-    font-size: 1.3em;
-    opacity: .5;
-}
+.faded { opacity: 0.8; }
