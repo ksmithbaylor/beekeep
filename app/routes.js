@@ -41,6 +41,16 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     },
   });
 
+  $stateProvider.state('app.yardPallets', {
+    url: '/yard/:id/pallets',
+    views: {
+      'browse': {
+        templateUrl: 'modules/views/browse/pallets.html',
+        controller: 'PalletsController'
+      }
+    },
+  });
+
   // Activity Tab Routes ///////////////////////////////////////////////////////
 
   $stateProvider.state('app.activity', {

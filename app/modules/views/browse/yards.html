@@ -1,8 +1,8 @@
 <ion-view title="Bee Yards">
     <ion-content class="has-header">
         <ion-list>
-            <ion-item class="item-icon-left item-icon-right" ng-repeat="yard in $root.data.yards" ui-sref="app.yardDetail({id: yard.id})">
-                <i class="icon ion-edit"></i>
+            <ion-item ng-click="console.log('clicked the item')" class="item-icon-left item-icon-right" ng-repeat="yard in $root.data.yards" ui-sref="app.yardPallets({id: yard.id})">
+                <a ng-click="console.log('clicked the icon')" class="icon ion-edit" ui-sref="app.yardDetail({id: yard.id})"></a>
                 Yard name
                 <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
