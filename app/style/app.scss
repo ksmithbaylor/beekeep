@@ -53,6 +53,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     color: $dark;
 }
 
+// Custom helper classes
+.bk-fixed-bar {
+    padding: 0px;
+}
+
 // Utility
 .text-light { color: $light !important; }
 .text-stable { color: $stable !important; }
