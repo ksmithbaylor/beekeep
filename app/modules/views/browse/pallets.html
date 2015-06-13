@@ -1,8 +1,13 @@
 <ion-view title="Pallets">
-    <ion-content class="has-header">
+    <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
+        <button class="button button-balanced bk-subheader-button">View/Edit Bee Yard</button>
+        <button class="button button-positive bk-subheader-button">Create New Pallet</button>
+    </ion-header>
+    <ion-content class="has-subheader">
         <ion-list>
-            <ion-item ng-repeat="pallet in thisYardsPallets">
+            <ion-item ng-repeat="pallet in $root.data.pallets" class="item-icon-right">
                 {{pallet.id}}
+                <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
         </ion-list>
     </ion-content>

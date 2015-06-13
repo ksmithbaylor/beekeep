@@ -1,11 +1,11 @@
 <ion-view title="Bee Yards">
     <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
-        <button class="button button-positive">Create New Bee Yard</button>
+        <button class="button button-positive bk-subheader-button">Create New Bee Yard</button>
     </ion-header>
     <ion-content class="has-subheader">
         <ion-list>
-            <ion-item ng-repeat="yard in $root.data.yards" class="item-icon-right" ui-sref="app.yardPallets({id: yard.id})">
-                {{yard.name || 'Yard Name'}}
+            <ion-item ng-repeat="yard in $root.data.yards" ui-sref="app.yardPallets({id: yard.id})" class="item-icon-right">
+                {{yard.name || 'Un-named Yard'}}
                 <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
         </ion-list>

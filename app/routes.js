@@ -26,23 +26,23 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/yards.html',
-        controller: 'BrowseController'
+        controller: 'YardsController'
       }
     }
   });
 
   $stateProvider.state('app.yardDetail', {
-    url: '/yard_detail/:id',
+    url: '/yard-detail/:id',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/yard.html',
+        templateUrl: 'modules/views/browse/yard-detail.html',
         controller: 'YardDetailController'
       }
     },
   });
 
   $stateProvider.state('app.yardPallets', {
-    url: '/yard/:id/pallets',
+    url: '/yard/:id',
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/pallets.html',

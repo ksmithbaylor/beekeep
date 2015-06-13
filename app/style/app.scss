@@ -18,6 +18,7 @@ $dark:                            #444 !default;
 $energized: #EEB211;
 $positive: #023D7B;
 $dark: #00254C;
+$balanced: #005525;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -56,6 +57,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Custom helper classes
 .bk-fixed-bar {
     padding: 0px;
+}
+
+.bk-subheader-button {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
 }
 
 // Utility
