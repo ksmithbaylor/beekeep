@@ -7,6 +7,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     controller: 'NavigationController'
   });
 
+
   // Home Tab Routes ///////////////////////////////////////////////////////////
 
   $stateProvider.state('app.home', {
@@ -18,6 +19,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
       }
     }
   });
+
 
   // Browse Tab Routes /////////////////////////////////////////////////////////
 
@@ -51,6 +53,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     },
   });
 
+
   // Activity Tab Routes ///////////////////////////////////////////////////////
 
   $stateProvider.state('app.activity', {
@@ -62,6 +65,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
       }
     }
   });
+
 
   // Todo Tab Routes ///////////////////////////////////////////////////////////
 
