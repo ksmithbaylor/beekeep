@@ -7,7 +7,6 @@ var rename     = require('gulp-rename');
 var plumber    = require('gulp-plumber');
 var server     = require('gulp-server-livereload');
 var chalk      = require('chalk');
-var _          = require('lodash');
 
 var inputDir  = './app/';
 var outputDir = './www/';
