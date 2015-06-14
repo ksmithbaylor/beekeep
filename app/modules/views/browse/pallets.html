@@ -3,9 +3,12 @@
         <button class="button button-balanced bk-subheader-button">View/Edit Bee Yard</button>
         <button class="button button-positive bk-subheader-button">Create New Pallet</button>
     </ion-header>
+
     <ion-content class="has-subheader" has-bouncing="true">
         <ion-list>
-            <ion-item ng-repeat="pallet in $root.data.pallets" class="item-icon-right">
+            <ion-item
+                ng-repeat="pallet in $root.data.pallets"
+                class="item-icon-right">
                 {{pallet.id}}
                 <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
