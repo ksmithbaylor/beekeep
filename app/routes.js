@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function ($stateProvider, $urlRouterProvider) {
+  // Top-level route, loads the tab layout
   $stateProvider.state('app', {
     abstract: true,
     templateUrl: 'modules/views/navigation/tabs.html',
@@ -89,5 +90,6 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
+  // Default route is the home tab
   $urlRouterProvider.otherwise('/home');
 };
