@@ -28,7 +28,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/browse',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/yards.html',
+        templateUrl: 'modules/views/browse/index.html',
       }
     }
   });
@@ -44,10 +44,10 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('app.yardPallets', {
-    url: '/yard/:id',
+    url: '/yard-pallets/:id',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/pallets.html',
+        templateUrl: 'modules/views/browse/yard-pallets.html',
         controller: 'YardController'
       }
     },
