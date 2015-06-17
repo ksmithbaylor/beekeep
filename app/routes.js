@@ -53,6 +53,16 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     },
   });
 
+  $stateProvider.state('app.yardNew', {
+    url: '/yard-new',
+    views: {
+      'browse': {
+        templateUrl: 'modules/views/browse/yard-new.html',
+        controller: 'YardController'
+      }
+    },
+  });
+
 
   // Activity Tab Routes ///////////////////////////////////////////////////////
 
