@@ -24,6 +24,7 @@ var paths = {
 
 gulp.task('js', function (done) {
   function bundle(b, done) {
+    console.log(chalk.blue('(re)bundling js'));
     b.bundle()
       .on('error', function(err) {
         console.log(chalk.red(err.message));
@@ -70,13 +71,7 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['js', 'sass', 'html', 'assets']);
 
-gulp.task('default', [
-  'js',
-  'sass',
-  'html',
-  'assets',
-  'watch'
-], function() {
+gulp.task('default', [ 'js', 'sass', 'html', 'assets', 'watch' ], function() {
   console.log(chalk.green('Starting server!'));
   gulp.src(outputDir).pipe(server({
     port: 8100,
