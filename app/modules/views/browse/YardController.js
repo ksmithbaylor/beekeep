@@ -2,7 +2,7 @@
 
 var co = require('co');
 
-module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, DB) {
+module.exports = function($scope, $rootScope, $stateParams, DB) {
   $scope.newYard = {};
 
   $scope.submitNewYard = function() {
@@ -10,7 +10,7 @@ module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, DB) {
       yield DB.Yard.create($scope.newYard);
       $rootScope.update('Yard');
       $scope.newYard = {};
-      $ionicHistory.goBack();
+      $scope.goBack();
     });
   };
 

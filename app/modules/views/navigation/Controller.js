@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function ($scope, $ionicPopup, ScannerService) {
+module.exports = function ($scope, $ionicPopup, $ionicHistory, ScannerService) {
   $scope.scan = function() {
     ScannerService.scan('Scan a hive!', function(result) {
       result.cancelled ?
@@ -10,4 +10,8 @@ module.exports = function ($scope, $ionicPopup, ScannerService) {
       $ionicPopup.alert({title: 'Error', template: 'Something went wrong.'});
     });
   };
+
+  $scope.goBack = function() {
+    $ionicHistory.goBack();
+  }
 };

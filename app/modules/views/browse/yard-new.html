@@ -1,10 +1,11 @@
 <ion-view title="Create Bee Yard">
     <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
-        <button type="submit" class="button button-positive bk-subheader-button" ng-click="submitNewYard()">Create</button>
-        <button type="submit" class="button button-assertive bk-subheader-button">Cancel</button>
+        <button class="button button-balanced bk-subheader-button" ng-click="submitNewYard()">Create</button>
+        <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
     </ion-header>
     <ion-content class="has-subheader">
         <div class="card">
+            <div class="item item-divider dark-bg text-stable">General:</div>
             <label class="item item-input">
                 <span class="input-label">Name:</span>
                 <input type="text" ng-model="newYard.name"></input>
@@ -13,33 +14,30 @@
                 <span class="input-label">Location:</span>
                 <input type="text" ng-model="newYard.location"></input>
             </label>
+            <ion-toggle ng-model="newYard.contracted" toggle-class="toggle-dark">Contracted (not my yard)</ion-toggle>
+            <label ng-show="newYard.contracted" class="item item-input">
+                <span class="input-label">Belongs to:</span>
+                <input type="text" ng-model="newYard.owner"></input>
+            </label>
         </div>
 
         <div class="card">
-            <div class="item item-divider">Type of yard:</div>
+            <div class="item item-divider dark-bg text-stable">Type of yard:</div>
             <ion-radio ng-model="newYard.type" ng-value="honey">Honey</ion-radio>
             <ion-radio ng-model="newYard.type" ng-value="pollenation">Pollenation</ion-radio>
         </div>
 
         <div class="card">
-            <div class="item item-divider">Crops in the area:</div>
+            <div class="item item-divider dark-bg text-stable">Crops in the area:</div>
             <label class="item item-input">
                 <textarea ng-model="newYard.crops" rows="4"></textarea>
             </label>
         </div>
 
         <div class="card">
-            <div class="item item-divider">Other notes:</div>
+            <div class="item item-divider dark-bg text-stable">Other notes:</div>
             <label class="item item-input">
                 <textarea ng-model="newYard.notes" rows="4"></textarea>
-            </label>
-        </div>
-
-        <div class="card">
-            <ion-toggle ng-model="newYard.contracted" toggle-class="toggle-balanced">Contracted (not my yard)</ion-toggle>
-            <label ng-show="newYard.contracted" class="item item-input">
-                <span class="input-label">Belongs to:</span>
-                <input type="text" ng-model="newYard.owner"></input>
             </label>
         </div>
     </ion-content>
