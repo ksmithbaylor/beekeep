@@ -34,12 +34,19 @@ module.exports = function (db, singular, plural, relations) {
     return destroyed.deleted;
   }
 
+  function* save(object) {
+    var saved = yield db.rel.save(singular, object || {});
+    if (window.DEBUG) console.log('saved a ' + this.schema.singular + ':', saved);
+    return saved[plural][0];
+  }
+
   return {
     create: create,
     find: find,
     all: all,
     first: first,
     destroy: destroy,
+    save: save,
     schema: {
       singular: singular,
       plural: plural,
