@@ -1,6 +1,7 @@
 <ion-view title="Yard Detail">
-    <ion-content class="has-header">
-        <p>This is yard:</p>
-        <p>{{yard.id}}</p>
-    </ion-content>
+    <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
+        <button class="button button-balanced bk-subheader-button" ng-click="updateYard()">Save</button>
+        <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
+    </ion-header>
+    <ng-include src="'modules/views/browse/yard-fields.html'"></ng-include>
 </ion-view>

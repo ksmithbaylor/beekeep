@@ -3,13 +3,10 @@
 var co = require('co');
 
 module.exports = function($scope, $rootScope, $stateParams, DB) {
-  $scope.newYard = {};
-
-  $scope.submitNewYard = function() {
+  $scope.updateYard = function() {
     co(function *() {
-      yield DB.Yard.create($scope.newYard);
+      yield DB.Yard.save($scope.yard);
       $rootScope.update('Yard');
-      $scope.newYard = {};
       $scope.goBack();
     });
   };

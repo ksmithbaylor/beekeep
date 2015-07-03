@@ -34,7 +34,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('app.yardDetail', {
-    url: '/yard-detail/:id',
+    url: '/yard/:id',
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/yard-detail.html',
@@ -44,7 +44,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('app.yardPallets', {
-    url: '/yard-pallets/:id',
+    url: '/yard/:id/pallets',
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/yard-pallets.html',
@@ -54,11 +54,11 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('app.yardNew', {
-    url: '/yard-new',
+    url: '/yard/new',
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/yard-new.html',
-        controller: 'YardController'
+        controller: 'YardNewController'
       }
     },
   });
