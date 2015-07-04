@@ -38,7 +38,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/yard/:id',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/yard-detail.html',
+        templateUrl: 'modules/views/browse/yards/yard-detail.html',
         controller: 'YardController'
       }
     },
@@ -48,7 +48,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/yard/:id/pallets',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/yard-pallets.html',
+        templateUrl: 'modules/views/browse/yards/yard-pallets.html',
         controller: 'YardController'
       }
     },
@@ -58,7 +58,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     url: '/yard/new',
     views: {
       'browse': {
-        templateUrl: 'modules/views/browse/yard-new.html',
+        templateUrl: 'modules/views/browse/yards/yard-new.html',
         controller: 'YardNewController'
       }
     },
