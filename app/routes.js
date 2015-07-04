@@ -29,6 +29,7 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     views: {
       'browse': {
         templateUrl: 'modules/views/browse/index.html',
+        controller: 'YardController'
       }
     }
   });

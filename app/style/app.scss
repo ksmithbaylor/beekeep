@@ -66,6 +66,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     bottom: auto !important;
 }
 
+.bk-entity-name-header {
+    margin-bottom: 0;
+    text-align: center;
+    background-color: darken($stable, 4%);
+}
+
 // Utility
 .text-light { color: $light !important; }
 .text-stable { color: $stable !important; }
