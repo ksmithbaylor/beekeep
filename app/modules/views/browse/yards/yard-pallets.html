@@ -1,11 +1,11 @@
-<ion-view title="Pallets">
+<ion-view>
+    <ion-nav-title>{{yard.name}}</ion-nav-title>
     <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
         <button class="button button-positive bk-subheader-button" ui-sref="app.yardDetail({id: yard.id})">View/Edit This Yard</button>
         <button class="button button-balanced bk-subheader-button">New Pallet</button>
     </ion-header>
 
     <ion-content class="has-subheader" has-bouncing="true">
-        <h3 class="padding-vertical bk-entity-name-header">{{yard.name}}</h2>
         <ion-list>
             <ion-item
                 ng-repeat="pallet in yard.pallets"
