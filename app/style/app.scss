@@ -72,6 +72,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     background-color: darken($stable, 4%);
 }
 
+.bk-block-button {
+    width: 67% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px !important;
+}
+
 // Utility
 .text-light { color: $light !important; }
 .text-stable { color: $stable !important; }
