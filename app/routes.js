@@ -9,19 +9,6 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
-  // Home Tab Routes ///////////////////////////////////////////////////////////
-
-  $stateProvider.state('app.home', {
-    url: '/home',
-    views: {
-      'home': {
-        templateUrl: 'modules/views/home/index.html',
-        controller: 'HomeController'
-      }
-    }
-  });
-
-
   // Yards Tab Routes /////////////////////////////////////////////////////////
 
   $stateProvider.state('app.yards', {
@@ -89,6 +76,6 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
-  // Default route is the home tab
-  $urlRouterProvider.otherwise('/home');
+  // Default route is the yards tab
+  $urlRouterProvider.otherwise('/yards');
 };

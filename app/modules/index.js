@@ -5,7 +5,6 @@ var _ = require('lodash');
 module.exports = _.map([
     require('./views/navigation'),
 
-    require('./views/home'),
     require('./views/yards'),
     require('./views/activity'),
     require('./views/todo'),
