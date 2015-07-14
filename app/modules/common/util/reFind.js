@@ -8,7 +8,7 @@ module.exports = function reFind($scope, $stateParams, DB, stateName, type) {
       if (window.DEBUG) console.log('entered', stateName);
 
       co(function *() {
-        // This controller is used for the Browse home page and the yard-pallets
+        // This controller is used for the Yards
         // view. If $stateParams.id exists, we are in the yard-pallets view and
         // should find that yard in the DB. Otherwise, just use an empty object.
         var found = $stateParams.id ? yield DB[type].find($stateParams.id) : {};

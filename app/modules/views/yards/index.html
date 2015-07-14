@@ -11,7 +11,7 @@
         <ion-list>
             <ion-item
                 ng-repeat="yard in $root.data.yards"
-                ui-sref="app.yardPallets({id: yard.id})"
+                ui-sref="app.yardDetail({id: yard.id})"
                 class="item-icon-right">
                 {{yard.name || 'Un-named Yard'}}
                 <i class="icon ion-ios-arrow-right"></i>

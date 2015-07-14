@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="item item-divider dark-bg text-stable">General:</div>
+    <label class="item item-input">
+        <span class="input-label">Name:</span>
+        <input type="text" ng-model="yard.name"></input>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Location:</span>
+        <input type="text" ng-model="yard.location"></input>
+    </label>
+    <ion-toggle ng-model="yard.contracted" toggle-class="toggle-dark">Contracted (not my yard)</ion-toggle>
+    <label ng-show="yard.contracted" class="item item-input">
+        <span class="input-label">Belongs to:</span>
+        <input type="text" ng-model="yard.owner"></input>
+    </label>
+</div>
+
+<div class="card">
+    <div class="item item-divider dark-bg text-stable">Type of yard:</div>
+    <ion-radio ng-model="yard.type" ng-value="'honey'">Honey</ion-radio>
+    <ion-radio ng-model="yard.type" ng-value="'pollenation'">Pollenation</ion-radio>
+</div>
+
+<div class="card">
+    <div class="item item-divider dark-bg text-stable">Crops in the area:</div>
+    <label class="item item-input">
+        <textarea ng-model="yard.crops" rows="4"></textarea>
+    </label>
+</div>
+
+<div class="card">
+    <div class="item item-divider dark-bg text-stable">Other notes:</div>
+    <label class="item item-input">
+        <textarea ng-model="yard.notes" rows="4"></textarea>
+    </label>
+</div>

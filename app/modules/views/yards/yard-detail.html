@@ -1,0 +1,13 @@
+<ion-view title="Yard Detail">
+    <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
+        <button class="button button-balanced bk-subheader-button" ng-click="updateYard()">Save</button>
+        <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
+    </ion-header>
+    <ion-content class="has-subheader">
+        <!--TODO: make this button do something-->
+        <button class="button button-block button-stable">See All Activity <i class="icon ion-arrow-right-c"></i></button>
+        <ng-include src="'modules/views/yards/yard-fields.html'"></ng-include>
+        <!--TODO: make this button do something-->
+        <button class="button button-assertive button-block">Delete This Bee Yard</button>
+    </ion-content>
+</ion-view>

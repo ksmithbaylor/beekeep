@@ -22,13 +22,13 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
-  // Browse Tab Routes /////////////////////////////////////////////////////////
+  // Yards Tab Routes /////////////////////////////////////////////////////////
 
-  $stateProvider.state('app.browse', {
-    url: '/browse',
+  $stateProvider.state('app.yards', {
+    url: '/yards',
     views: {
-      'browse': {
-        templateUrl: 'modules/views/browse/index.html'
+      'yards': {
+        templateUrl: 'modules/views/yards/index.html'
       }
     }
   });
@@ -36,19 +36,9 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app.yardDetail', {
     url: '/yard/:id',
     views: {
-      'browse': {
-        templateUrl: 'modules/views/browse/yards/yard-detail.html',
+      'yards': {
+        templateUrl: 'modules/views/yards/yard-detail.html',
         controller: 'YardDetailController'
-      }
-    },
-  });
-
-  $stateProvider.state('app.yardPallets', {
-    url: '/yard/:id/pallets',
-    views: {
-      'browse': {
-        templateUrl: 'modules/views/browse/yards/yard-pallets.html',
-        controller: 'YardPalletsController'
       }
     },
   });
@@ -56,8 +46,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('app.yardNew', {
     url: '/yard/new',
     views: {
-      'browse': {
-        templateUrl: 'modules/views/browse/yards/yard-new.html',
+      'yards': {
+        templateUrl: 'modules/views/yards/yard-new.html',
         controller: 'YardNewController'
       }
     },

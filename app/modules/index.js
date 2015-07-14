@@ -6,7 +6,7 @@ module.exports = _.map([
     require('./views/navigation'),
 
     require('./views/home'),
-    require('./views/browse'),
+    require('./views/yards'),
     require('./views/activity'),
     require('./views/todo'),
     require('./views/sandbox'),

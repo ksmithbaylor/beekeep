@@ -3,5 +3,7 @@
         <button class="button button-balanced bk-subheader-button" ng-click="submitNewYard()">Create</button>
         <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
     </ion-header>
-    <ng-include src="'modules/views/browse/yards/yard-fields.html'"></ng-include>
+    <ion-content class="has-subheader">
+        <ng-include src="'modules/views/yards/yard-fields.html'"></ng-include>
+    </ion-content>
 </ion-view>

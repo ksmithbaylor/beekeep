@@ -1,7 +1,7 @@
 'use strict';
 
 var co = require('co');
-var reFind = require('../../../common/util/reFind');
+var reFind = require('../../common/util/reFind');
 
 module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, DB) {
   reFind($scope, $stateParams, DB, 'app.yardDetail', 'Yard');
