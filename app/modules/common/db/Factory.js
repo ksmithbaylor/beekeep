@@ -8,7 +8,7 @@ PouchDB.plugin(require('relational-pouch'));
 // TODO: add pouchdb-persist plugin for easier syncing
 require('angular-pouchdb');
 
-module.exports = function(pouchDB, pouchDecorators) {
+module.exports = function(pouchDB, pouchDBDecorators) {
   // If the Cordova SQL plugin is present, it will use SQLite
   var db = pouchDB('beekeep', { adapter: 'websql' });
 
@@ -44,7 +44,7 @@ module.exports = function(pouchDB, pouchDecorators) {
     'save', 'find', 'del', 'putAttachment', 'getAttachment',
     'removeAttachment', 'parseDocID', 'makeDocID'
   ], function(fn) {
-    db.rel[fn] = pouchDecorators.qify(db.rel[fn]);
+    db.rel[fn] = pouchDBDecorators.qify(db.rel[fn]);
   });
 
   return {
