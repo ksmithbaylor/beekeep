@@ -41,6 +41,19 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
+  // Hives Tab Routes //////////////////////////////////////////////////////////
+
+  $stateProvider.state('app.hives', {
+    url: '/hives',
+    views: {
+      'hives': {
+        templateUrl: 'modules/views/hives/index.html',
+        controller: 'HivesController'
+      }
+    }
+  });
+
+
   // Activity Tab Routes ///////////////////////////////////////////////////////
 
   $stateProvider.state('app.activity', {
@@ -53,6 +66,8 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     }
   });
 
+
+  // Sandbox Tab Routes ////////////////////////////////////////////////////////
 
   $stateProvider.state('app.sandbox', {
     url: '/sandbox',

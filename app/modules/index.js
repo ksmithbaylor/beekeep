@@ -6,6 +6,7 @@ module.exports = _.map([
     require('./views/navigation'),
 
     require('./views/yards'),
+    require('./views/hives'),
     require('./views/activity'),
     require('./views/sandbox'),
 
