@@ -54,18 +54,6 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
-  // Todo Tab Routes ///////////////////////////////////////////////////////////
-
-  $stateProvider.state('app.todo', {
-    url: '/todo',
-    views: {
-      'todo': {
-        templateUrl: 'modules/views/todo/index.html',
-        controller: 'TodoController'
-      }
-    }
-  });
-
   $stateProvider.state('app.sandbox', {
     url: '/sandbox',
     views: {
