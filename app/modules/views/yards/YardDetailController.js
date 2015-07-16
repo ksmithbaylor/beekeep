@@ -3,6 +3,20 @@
 var co = require('co');
 var reFind = require('../../common/util/reFind');
 
+function confirm($ionicPopup, title, template, action) {
+  $ionicPopup.confirm({
+    title: title,
+    template: template,
+    okText: 'Yes',
+    okType: 'button-dark',
+    cancelText: 'No'
+  }).then(function (response) {
+    if (response) {
+      action();
+    }
+  });
+}
+
 module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, $ionicPopup, DB) {
   reFind($scope, $stateParams, DB, 'app.yardDetail', 'Yard');
 
@@ -15,28 +29,18 @@ module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, $ioni
   };
 
   $scope.cancel = function() {
-    $ionicPopup.confirm({
-      title: 'Cancel',
-      template: 'Close without saving?'
-    }).then(function (response) {
-      if (response) {
-        $ionicHistory.goBack();
-      }
-    });
-  }
+    confirm($ionicPopup, 'Cancel', 'Close without saving?', function() {
+      $ionicHistory.goBack();
+    })
+  };
 
   $scope.deleteYard = function() {
-    $ionicPopup.confirm({
-      title: 'Delete',
-      template: 'Are you sure you want to permanently delete this Bee Yard?'
-    }).then(function (response) {
-      if (response) {
-        co(function *() {
-          yield DB.Yard.destroy($scope.yard);
-          $rootScope.update('Yard');
-          $ionicHistory.goBack();
-        });
-      }
+    confirm($ionicPopup, 'Delete', 'Are you sure you want to permanently delete this Bee Yard?', function() {
+      co(function *() {
+        yield DB.Yard.destroy($scope.yard);
+        $rootScope.update('Yard');
+        $ionicHistory.goBack();
+      });
     });
-  }
+  };
 };
