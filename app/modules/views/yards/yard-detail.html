@@ -1,12 +1,13 @@
 <ion-view title="Yard Detail">
     <ion-header class="bar bar-subheader button-bar bk-fixed-bar">
         <button class="button button-balanced bk-subheader-button" ng-click="updateYard()">Save</button>
-        <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
+        <button class="button button-assertive bk-subheader-button" ng-click="cancel()">Cancel</button>
     </ion-header>
     <ion-content class="has-subheader">
         <button
             ui-sref="app.yardActivity({id: yard.id})"
-            class="button button-block button-stable bk-block-button">
+            class="button button-block button-stable bk-block-button"
+            id="see-all-activity-button">
             See All Activity <i class="icon ion-arrow-right-c"></i>
         </button>
 

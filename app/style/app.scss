@@ -19,6 +19,7 @@ $energized: #EEB211;
 $positive: #023D7B;
 $dark: #00254C;
 $balanced: #005525;
+$assertive: #B71C1C;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -64,6 +65,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     top: auto !important;
     right: auto !important;
     bottom: auto !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 6px 0px rgba(50,50,50,0.20);
 }
 
 .bk-entity-name-header {
@@ -73,10 +76,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .bk-block-button {
-    width: 67% !important;
+    width: 80% !important;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px !important;
+    font-weight: bold;
+    box-shadow: 0 4px 6px 0px rgba(50,50,50,0.50);
 }
 
 // Utility
