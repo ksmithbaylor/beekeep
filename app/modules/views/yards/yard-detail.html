@@ -9,8 +9,13 @@
             class="button button-block button-stable bk-block-button">
             See All Activity <i class="icon ion-arrow-right-c"></i>
         </button>
+
         <ng-include src="'modules/views/yards/yard-fields.html'"></ng-include>
-        <!--TODO: make this button do something-->
-        <button class="button button-block button-assertive bk-block-button">Delete This Bee Yard</button>
+
+        <button
+            ng-click="deleteYard()"
+            class="button button-block button-assertive bk-block-button">
+            Delete This Bee Yard
+        </button>
     </ion-content>
 </ion-view>
