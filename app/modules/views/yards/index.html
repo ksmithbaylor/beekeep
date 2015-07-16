@@ -10,7 +10,7 @@
     <ion-content class="has-subheader" has-bouncing="true">
         <ion-list>
             <ion-item
-                ng-repeat="yard in $root.data.yards"
+                ng-repeat="yard in $root.data.yards | orderBy: 'name'"
                 ui-sref="app.yardDetail({id: yard.id})"
                 class="item-icon-right">
                 {{yard.name || 'Un-named Yard'}}
