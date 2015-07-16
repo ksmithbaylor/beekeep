@@ -14,21 +14,29 @@ module.exports = function($scope, $rootScope, $stateParams, $ionicHistory, $ioni
     });
   };
 
+  $scope.cancel = function() {
+    $ionicPopup.confirm({
+      title: 'Cancel',
+      template: 'Close without saving?'
+    }).then(function (response) {
+      if (response) {
+        $ionicHistory.goBack();
+      }
+    });
+  }
+
   $scope.deleteYard = function() {
-    co(function *() {
-      console.log('trying to delete');
-      $ionicPopup.confirm({
-        title: 'Delete Yard',
-        template: 'Are you sure you want to permanently delete this Bee Yard?'
-      }).then(function (response) {
-        if (response) {
-          co(function *() {
-            yield DB.Yard.destroy($scope.yard);
-            $rootScope.update('Yard');
-            $ionicHistory.goBack();
-          });
-        }
-      })
-    })
+    $ionicPopup.confirm({
+      title: 'Delete',
+      template: 'Are you sure you want to permanently delete this Bee Yard?'
+    }).then(function (response) {
+      if (response) {
+        co(function *() {
+          yield DB.Yard.destroy($scope.yard);
+          $rootScope.update('Yard');
+          $ionicHistory.goBack();
+        });
+      }
+    });
   }
 };
