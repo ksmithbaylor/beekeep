@@ -4,8 +4,11 @@
         <button class="button button-assertive bk-subheader-button" ng-click="goBack()">Cancel</button>
     </ion-header>
     <ion-content class="has-subheader">
-        <!--TODO: make this button do something-->
-        <button class="button button-block button-stable bk-block-button">See All Activity <i class="icon ion-arrow-right-c"></i></button>
+        <button
+            ui-sref="app.yardActivity({id: yard.id})"
+            class="button button-block button-stable bk-block-button">
+            See All Activity <i class="icon ion-arrow-right-c"></i>
+        </button>
         <ng-include src="'modules/views/yards/yard-fields.html'"></ng-include>
         <!--TODO: make this button do something-->
         <button class="button button-block button-assertive bk-block-button">Delete This Bee Yard</button>

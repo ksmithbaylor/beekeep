@@ -40,6 +40,17 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
     },
   });
 
+  $stateProvider.state('app.yardActivity', {
+    url: '/yard/:id/activity',
+    views: {
+      'yards': {
+        templateUrl: 'modules/views/yards/yard-activity.html',
+        controller: 'YardActivityController'
+      }
+    },
+  });
+
+
 
   // Hives Tab Routes //////////////////////////////////////////////////////////
 
