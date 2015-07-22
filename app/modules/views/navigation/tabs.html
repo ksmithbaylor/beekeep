@@ -1,13 +1,13 @@
 <ion-nav-bar class="bar bar-header bar-energized">
     <ion-nav-back-button class="button-icon text-positive icon ion-ios-arrow-back"> Back</ion-nav-back-button>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive icon ion-qr-scanner" ng-click="scan()"></button>
+    </ion-nav-buttons>
 </ion-nav-bar>
 
 <ion-tabs class="tabs-background-stable tabs-stable tabs-striped tabs-icon-top">
     <ion-tab title="Yards"   icon="ion-ios-location"  ui-sref="app.yards">
         <ion-nav-view name="yards"></ion-nav-view>
-    </ion-tab>
-    <ion-tab title="Hives" icon="ion-qr-scanner" ui-sref="app.hives">
-        <ion-nav-view name="hives"></ion-nav-view>
     </ion-tab>
     <ion-tab title="Actions" icon="ion-android-list" ui-sref="app.actions">
         <ion-nav-view name="actions"></ion-nav-view>
