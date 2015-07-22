@@ -78,18 +78,6 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
-  // Sandbox Tab Routes ////////////////////////////////////////////////////////
-
-  $stateProvider.state('app.sandbox', {
-    url: '/sandbox',
-    views: {
-      'sandbox': {
-        templateUrl: 'modules/views/sandbox/index.html',
-        controller: 'SandboxController'
-      }
-    }
-  });
-
   // Default route is the yards tab
   $urlRouterProvider.otherwise('/yards');
 };
