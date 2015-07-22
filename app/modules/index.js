@@ -7,7 +7,7 @@ module.exports = _.map([
 
     require('./views/yards'),
     require('./views/hives'),
-    require('./views/activity'),
+    require('./views/actions'),
     require('./views/sandbox'),
 
     require('./common/scanner'),

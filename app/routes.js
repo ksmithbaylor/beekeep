@@ -65,14 +65,14 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
   });
 
 
-  // Activity Tab Routes ///////////////////////////////////////////////////////
+  // Actions Tab Routes ///////////////////////////////////////////////////////
 
-  $stateProvider.state('app.activity', {
-    url: '/activity',
+  $stateProvider.state('app.actions', {
+    url: '/actions',
     views: {
-      'activity': {
-        templateUrl: 'modules/views/activity/index.html',
-        controller: 'ActivityController'
+      'actions': {
+        templateUrl: 'modules/views/actions/index.html',
+        controller: 'ActionsController'
       }
     }
   });
