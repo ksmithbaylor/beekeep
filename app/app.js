@@ -30,25 +30,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   require('./routes.js')($stateProvider, $urlRouterProvider);
 });
 
-// Development reset database
-if (resetDatabase) {
-  app.run(function(DB, $rootScope) {
-    return co(function* () {
-      var types = ['Yard', 'Hive', 'Pallet', 'Queen'];
-
-      for (var i in types) {
-        var type = types[i];
-        var all = yield DB[type].all();
-        yield all.map(function(r) {
-          return DB[type].destroy(r);
-        });
-      }
-
-      $rootScope.$apply();
-    });
-  });
-}
-
 // Initialize the app
 app.run(function($rootScope, DB, $ionicPlatform) {
   // Holds things we need across the whole app
